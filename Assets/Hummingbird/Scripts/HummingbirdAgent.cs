@@ -61,15 +61,6 @@ public class HummingbirdAgent : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        flowerMaterial = meshRenderer.material;
-
-        flowerCollider = transform.Find("FlowerCollider").GetComponent<Collider>();
-        nectarCollider = transform.Find("FlowerNectarCollider").GetComponent<Collider>();
-    }
-
     /// <summary>
     /// Attempts to remove nectar from the flower
     /// </summary>
