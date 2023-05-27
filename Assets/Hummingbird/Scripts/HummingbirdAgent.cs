@@ -89,20 +89,4 @@ public class HummingbirdAgent : MonoBehaviour
         // Return the amount of nectar that was taken
         return nectarTaken;
     }
-
-    /// <summary>
-    /// Reset the flower
-    /// </summary>
-    public void ResetFlower()
-    {
-        // Refill the nectar
-        NectarAmount = 1f;
-
-        // Enable the flower and nectar colliders
-        flowerCollider.gameObject.SetActive(true);
-        nectarCollider.gameObject.SetActive(true);
-
-        // Change the flower color to indicate that it's full
-        flowerMaterial.SetColor("_Color", fullFlowerColor);
-    }
 }
