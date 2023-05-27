@@ -60,33 +60,4 @@ public class HummingbirdAgent : MonoBehaviour
             return NectarAmount > 0f;
         }
     }
-
-    /// <summary>
-    /// Attempts to remove nectar from the flower
-    /// </summary>
-    /// <param name="amount">The amount of nectar to remove</param>
-    /// <returns>The actual amount successfully removed</returns>
-    public float Feed(float amount)
-    {
-        // Track how much nectar was successfully taken (cannot take more than is available)
-        float nectarTaken = Mathf.Clamp(amount, 0f, NectarAmount);
-
-        // Subtract the nectar
-        NectarAmount -= nectarTaken;
-
-        if (NectarAmount <= 0) {
-            // No nectar remaining
-            NectarAmount = 0;
-
-            //Disable the flower and nectar colliders
-            flowerCollider.gameObject.SetActive(false);
-            nectarCollider.gameObject.SetActive(false);
-
-            // Change the flower color to indicate that it's empty
-            flowerMaterial.SetColor("_Color", emptyFlowerColor);
-        }
-
-        // Return the amount of nectar that was taken
-        return nectarTaken;
-    }
 }
