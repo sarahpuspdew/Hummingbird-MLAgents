@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages a single flower with nectar
+/// </summary>
 public class Flower : MonoBehaviour
 {
-    /// <summary>
-    /// Manages a single flower with nectar
-    /// </summary>
     [Tooltip("The color when the flower is full")]
     public Color fullFlowerColor = new Color(1f, 0f, .3f);
 
